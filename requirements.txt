@@ -1,6 +1,6 @@
 Kaggle
 duckdb
-matplotlib.pyplot
+matplotlib
 seaborn
 plotly.express
 re
