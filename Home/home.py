@@ -172,7 +172,7 @@ with col2:
 # Main image (placeholder)
 st.markdown("<div style='text-align: center; margin: 20px 0;'>", unsafe_allow_html=True)
 st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop", 
-         caption="Data Visualization", use_column_width=True)
+         caption="Data Visualization", use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Main content section
@@ -276,7 +276,7 @@ col1, col2 = st.columns([1, 3])
 with col1:
     # Author profile image
     st.markdown("<div class='author-section'>", unsafe_allow_html=True)
-    st.image("project/IMG_7940.JPG", width=200)
+    st.image("project\IMG_7940.JPG", width=200)
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:
