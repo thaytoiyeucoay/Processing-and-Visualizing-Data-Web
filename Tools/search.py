@@ -68,12 +68,7 @@ def searchAndDisplayKaggleDatasets(credentials_ok):
                     except Exception as e:
                         st.error(f"Lỗi khi đọc file CSV: {e}")
 
-# Thiết lập thông tin xác thực Kaggle và lưu vào file ~/.kaggle/kaggle.json
-# def setupKaggleCredentials():
-#     os.environ['KAGGLE_USERNAME'] = 'duybuii'  # Thay 'your_username' bằng username của bạn
-#     os.environ['KAGGLE_KEY'] = 'c3757a6c1e08db26696a16f4ba59311c'            # Thay 'your_key' bằng key của bạn
-#     #st.success("Đã thiết lập thông tin xác thực Kaggle từ key trực tiếp.")
-#     return True
+
 
 def install_kaggle():
     """Install the Kaggle package if not already installed."""
