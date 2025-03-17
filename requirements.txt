@@ -3,5 +3,3 @@ duckdb
 matplotlib
 seaborn
 plotly.express
-re
-io
