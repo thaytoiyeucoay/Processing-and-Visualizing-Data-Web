@@ -1,2 +1,3 @@
 Kaggle
 duckdb
+matplotlib.pyplot
