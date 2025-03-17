@@ -270,7 +270,6 @@ st.markdown("</div>", unsafe_allow_html=True)
 
 # Author section
 st.markdown("<h2>Về tác giả</h2>", unsafe_allow_html=True)
-#st.markdown("<div class='css-card'>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([1, 3])
 with col1:
@@ -325,70 +324,3 @@ with col2:
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-# # Feature tabs (just the UI, no data)
-# st.markdown("<h2>Tính năng của chúng tôi</h2>", unsafe_allow_html=True)
-# st.markdown("<div class='css-card'>", unsafe_allow_html=True)
-
-# tabs = st.tabs(["Biểu đồ thống kê", "Dự đoán xu hướng", "Phân tích văn bản"])
-
-# with tabs[0]:
-#     st.markdown("### Biểu đồ thống kê")
-#     st.markdown("""
-#     <div class='info-box'>
-#         Công cụ tạo biểu đồ trực quan hiện đại giúp bạn nhanh chóng biến dữ liệu thành thông tin có giá trị.
-#         Hỗ trợ nhiều loại biểu đồ khác nhau: cột, đường, tròn, bong bóng, heatmap và nhiều hơn nữa.
-#     </div>
-    
-#     <div style="text-align: center; margin: 20px 0; padding: 40px; background-color: rgba(99, 102, 241, 0.1); border-radius: 8px;">
-#         <p>👨‍💻 Biểu đồ thống kê sẽ xuất hiện tại đây 📊</p>
-#     </div>
-#     """, unsafe_allow_html=True)
-    
-# with tabs[1]:
-#     st.markdown("### Dự đoán xu hướng")
-#     st.markdown("""
-#     <div class='info-box'>
-#         Sử dụng các mô hình Machine Learning tiên tiến để dự đoán xu hướng dữ liệu trong tương lai.
-#         Tích hợp các thuật toán ARIMA, Prophet, và các mô hình học sâu.
-#     </div>
-    
-#     <div style="text-align: center; margin: 20px 0; padding: 40px; background-color: rgba(99, 102, 241, 0.1); border-radius: 8px;">
-#         <p>📈 Biểu đồ dự đoán sẽ xuất hiện tại đây 📉</p>
-#     </div>
-#     """, unsafe_allow_html=True)
-
-# with tabs[2]:
-#     st.markdown("### Phân tích văn bản")
-#     st.markdown("""
-#     <div class='info-box'>
-#         Áp dụng kỹ thuật xử lý ngôn ngữ tự nhiên (NLP) để phân tích văn bản, tìm hiểu cảm xúc,
-#         trích xuất từ khóa và phân loại nội dung.
-#     </div>
-    
-#     <div style="display: flex; justify-content: center; margin: 20px 0;">
-#         <div style="background-color: rgba(99, 102, 241, 0.1); border-radius: 8px; padding: 20px; width: 80%;">
-#             <textarea placeholder="Nhập văn bản để phân tích..." style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 10px; color: white; height: 100px;"></textarea>
-#             <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
-#                 <button style="background: linear-gradient(45deg, #6366F1, #A855F7); border: none; color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Phân tích</button>
-#             </div>
-#         </div>
-#     </div>
-#     """, unsafe_allow_html=True)
-
-# st.markdown("</div>", unsafe_allow_html=True)
-
-# # Call to action section
-# st.markdown("<div style='text-align: center; margin: 30px 0;'>", unsafe_allow_html=True)
-# st.markdown("<h2>Sẵn sàng để bắt đầu phân tích dữ liệu của bạn?</h2>", unsafe_allow_html=True)
-# col1, col2, col3 = st.columns([1, 2, 1])
-# with col2:
-#     st.markdown("<div class='css-card' style='text-align: center;'>", unsafe_allow_html=True)
-#     st.markdown("Đăng ký để nhận thông báo khi có tính năng mới")
-#     email = st.text_input("Email của bạn")
-#     st.button("Đăng ký ngay")
-#     st.markdown("</div>", unsafe_allow_html=True)
-
-# # Footer
-# st.markdown("<footer>", unsafe_allow_html=True)
-# st.markdown("© 2025 Data Processing & Visualization. All rights reserved.", unsafe_allow_html=True)
-# st.markdown("</footer>", unsafe_allow_html=True)

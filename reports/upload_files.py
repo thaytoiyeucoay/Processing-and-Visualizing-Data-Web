@@ -73,7 +73,6 @@ def display_file_info(file_key, file_data):
             del st.session_state.uploaded_files[file_key]
             st.experimental_rerun()
 
-# Main app
 st.markdown("<h1>Multiple CSV File Uploader</h1>", unsafe_allow_html=True)
 
 # File uploader section

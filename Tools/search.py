@@ -14,7 +14,6 @@ import sys
 def searchAndDisplayKaggleDatasets(credentials_ok):
     st.subheader(" Hoặc tìm kiếm bộ dữ liệu trên Kaggle")
     query = st.text_input("Nhập từ khóa tìm kiếm")
-    #max_results = st.slider("Số lượng kết quả tối đa", 5, 50, 20)
     
     if query and credentials_ok:
         with st.spinner('Đang tìm kiếm...'):
@@ -23,8 +22,6 @@ def searchAndDisplayKaggleDatasets(credentials_ok):
         if not datasets:
             st.warning("Không tìm thấy kết quả nào!")
         else:
-            # Hiển thị kết quả tìm kiếm để debug
-            #st.write("Kết quả tìm kiếm:", datasets)
             selected_dataset_idx = st.selectbox(
                 "Chọn một bộ dữ liệu để xem thêm thông tin:",
                 range(len(datasets)),
@@ -69,37 +66,16 @@ def searchAndDisplayKaggleDatasets(credentials_ok):
                         st.error(f"Lỗi khi đọc file CSV: {e}")
 
 
-
-def install_kaggle():
-    """Install the Kaggle package if not already installed."""
-    try:
-        # Try importing the module to check if it's installed
-        import kaggle
-        print("Kaggle package is already installed.")
-    except ImportError:
-        print("Installing Kaggle package...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "kaggle"])
-        print("Kaggle package installed successfully.")
-
 def setupKaggleCredentials():
-    #install_kaggle()
 
     try:
-        # Read credentials from kaggle.json file
-        #with open('C:/Users/BUI KHANH DUY/.kaggle/kaggle.json', 'r') as f:
-        #    credentials = json.load(f)
-        
-        # Set environment variables from the JSON file
         os.environ['KAGGLE_USERNAME'] = "duybuii"
-        os.environ['KAGGLE_KEY'] = os.getenv("STREAMLIT_API_KEY")
+        os.environ['KAGGLE_KEY'] = st.secrets["STREAMLIT_API_KEY"]
         
-        #st.success("Đã thiết lập thông tin xác thực Kaggle từ file JSON.")
         return True
     except FileNotFoundError:
-        #st.error("Không tìm thấy file kaggle.json. Vui lòng tải file từ tài khoản Kaggle của bạn.")
         return False
     except Exception as e:
-        #st.error(f"Lỗi khi thiết lập thông tin xác thực Kaggle: {e}")
         return False    
 
 # Hàm khởi tạo và authenticate Kaggle API
@@ -116,9 +92,7 @@ def get_kaggle_api():
 def search_kaggle_datasets(query, max_results=20):
     try:
         api = get_kaggle_api()
-        #st.info("Đang gọi hàm tìm kiếm từ Kaggle API...")
         datasets = api.dataset_list(search=query)
-        #st.info(f"Đã nhận được {len(datasets)} dataset từ Kaggle.")
         return datasets
     except Exception as e:
         st.error(f"Lỗi khi tìm kiếm: {e}")

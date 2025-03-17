@@ -69,12 +69,9 @@ def displayData():
       for encoding in encodings:
         try:
             df = pd.read_csv(uploaded_file, encoding=encoding)
-            #st.success(f"Đã đọc file thành công với bộ mã hóa {encoding}")
-            #st.dataframe(df)
             break
         except Exception as e:
             continue
-      # df = pd.read_csv(uploaded_file)
       st.subheader("Thông tin bộ dữ liệu")
       st.write(f"Số hàng: {df.shape[0]}")
       st.write(f"Số cột: {df.shape[1]}")
@@ -128,7 +125,6 @@ def visualizeData(file_data):
             col_to_plot = st.selectbox("Lựa chọn cột để trực quan:", numeric_cols)
             bins = st.slider("Number of bins:", 5, 100, 30)
             
-            # Create two columns for charts
             col1, col2 = st.columns(2)
             
             with col1:
@@ -610,4 +606,4 @@ df = displayData()
 processed_data = processingData(df)
 filterData(processed_data)
 visualizeData(processed_data)
-#queryData(df)
+
