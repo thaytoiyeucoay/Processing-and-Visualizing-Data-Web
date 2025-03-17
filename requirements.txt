@@ -1,3 +1,7 @@
 Kaggle
 duckdb
 matplotlib.pyplot
+seaborn
+plotly.express
+re
+io
