@@ -87,7 +87,7 @@ def install_kaggle():
         print("Kaggle package installed successfully.")
 
 def setupKaggleCredentials():
-    install_kaggle()
+    #install_kaggle()
 
     try:
         # Read credentials from kaggle.json file
@@ -95,8 +95,8 @@ def setupKaggleCredentials():
             credentials = json.load(f)
         
         # Set environment variables from the JSON file
-        os.environ['KAGGLE_USERNAME'] = credentials['username']
-        os.environ['KAGGLE_KEY'] = credentials['key']
+        os.environ['KAGGLE_USERNAME'] = "duybuii"
+        os.environ['KAGGLE_KEY'] = os.getenv("STREAMLIT_API_KEY")
         
         #st.success("Đã thiết lập thông tin xác thực Kaggle từ file JSON.")
         return True
