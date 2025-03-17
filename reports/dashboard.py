@@ -43,7 +43,7 @@ def designTitle():
       }
     }
     .animated-gradient-title {
-        font-size: 40px;
+        font-size: 80px;
         font-weight: bold;
         text-align: center;
         background: linear-gradient(-45deg, #FF5733, #33C9FF, #9B59B6, #E74C3C);
