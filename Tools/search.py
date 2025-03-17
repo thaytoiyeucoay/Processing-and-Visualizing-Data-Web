@@ -86,8 +86,8 @@ def setupKaggleCredentials():
 
     try:
         # Read credentials from kaggle.json file
-        with open('C:/Users/BUI KHANH DUY/.kaggle/kaggle.json', 'r') as f:
-            credentials = json.load(f)
+        #with open('C:/Users/BUI KHANH DUY/.kaggle/kaggle.json', 'r') as f:
+        #    credentials = json.load(f)
         
         # Set environment variables from the JSON file
         os.environ['KAGGLE_USERNAME'] = "duybuii"
