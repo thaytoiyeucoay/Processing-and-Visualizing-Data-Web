@@ -276,7 +276,7 @@ col1, col2 = st.columns([1, 3])
 with col1:
     # Author profile image
     st.markdown("<div class='author-section'>", unsafe_allow_html=True)
-    st.image("project\IMG_7940.JPG", width=200)
+    st.image("project/IMG_7940.JPG", width=200)
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col2:

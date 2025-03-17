@@ -7,6 +7,8 @@ import glob
 from kaggle.api.kaggle_api_extended import KaggleApi
 import time
 import numpy as np
+import subprocess
+import sys
 
 # Tìm kiếm và hiển thị dataset từ Kaggle
 def searchAndDisplayKaggleDatasets(credentials_ok):
@@ -73,8 +75,20 @@ def searchAndDisplayKaggleDatasets(credentials_ok):
 #     #st.success("Đã thiết lập thông tin xác thực Kaggle từ key trực tiếp.")
 #     return True
 
+def install_kaggle():
+    """Install the Kaggle package if not already installed."""
+    try:
+        # Try importing the module to check if it's installed
+        import kaggle
+        print("Kaggle package is already installed.")
+    except ImportError:
+        print("Installing Kaggle package...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "kaggle"])
+        print("Kaggle package installed successfully.")
 
 def setupKaggleCredentials():
+    install_kaggle()
+
     try:
         # Read credentials from kaggle.json file
         with open('C:/Users/BUI KHANH DUY/.kaggle/kaggle.json', 'r') as f:
