@@ -171,8 +171,9 @@ with col2:
 
 # Main image (placeholder)
 st.markdown("<div style='text-align: center; margin: 20px 0;'>", unsafe_allow_html=True)
-st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop", 
-         caption="Data Visualization", use_container_width=True)
+st.image("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+        width=1700  # thay use_container_width bằng width cụ thể
+)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Main content section
