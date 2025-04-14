@@ -23,13 +23,15 @@ def main():
 
     search = st.Page("Tools/search.py", title="Search", icon=":material/search:")
     history = st.Page("Tools/history.py", title="History", icon=":material/history:")
-
+    activity = st.Page("Tools/activity.py", title="Activity Monitor", icon=":material/analytics:")
+    encoding = st.Page("Tools/Encoding.py", title="Encoding")
+    scaling = st.Page("Tools/scaling.py", title="Scaling")
     if st.session_state.home:
         pg = st.navigation(
             {
                 #"Account": [logout_page],
                 "Reports": [dashboard, bugs, alerts],
-                "Tools": [search, history],
+                "Tools": [search, history, activity, encoding, scaling],
             }
     )
     else:
